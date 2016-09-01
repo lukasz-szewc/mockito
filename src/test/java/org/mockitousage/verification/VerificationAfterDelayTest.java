@@ -105,6 +105,9 @@ public class VerificationAfterDelayTest {
         DelayedExecution delayedExecution = new DelayedExecution(executor, mock, 20);
         delayedExecution.recordAsyncCall('1');
 
+        // when
+        delayedExecution.allAsyncCallsStarted();
+
         // then
         stopWatch.start();
 
